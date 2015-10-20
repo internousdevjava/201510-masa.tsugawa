@@ -47,9 +47,9 @@ public class KisoKadai3 {
 
 			try {
 				slcm = Integer.parseInt(br.readLine());
-			} catch (IOException e) {
+			} catch (Exception e) {
 				System.out.println("入力ミス");
-				e.printStackTrace();
+				continue;
 			}
 
 			switch (slcm) {
