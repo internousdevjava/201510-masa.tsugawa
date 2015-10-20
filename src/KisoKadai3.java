@@ -19,14 +19,13 @@ public class KisoKadai3 {
 			System.out.print("ファイル名:");
 			str = br.readLine();
 		} catch (IOException e1) {
-			System.out.println("適切な入力ではありません");
 			e1.printStackTrace();
 		}
 		File file = new File(str);
 		File dir = new File(file.getParent());
 		if (!dir.exists()) {
 			System.out.println("フォルダを作成します");
-			dir.mkdir();
+			dir.mkdirs();
 		} 
 		if (!file.exists()) {
 			System.out.println("ファイルを作成します");
