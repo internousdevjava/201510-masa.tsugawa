@@ -8,9 +8,9 @@ public class KisoKadai2 {
 		int ans = rnd.nextInt(100) + 1;
 		int usans = 0;
 		boolean flag = true;
-		System.out.println("”“–‚ÄƒQ[ƒ€‚ğ‚µ‚Ü‚·\n“š‚¦‚Í1`100‚Ì’l‚Å‚·");
+		System.out.println("æ•°å½“ã¦ã‚²ãƒ¼ãƒ ã‚’ã—ã¾ã™");
 		while (flag) {
-			System.out.print("”’l‚ğ“ü‚ê‚Ä‰º‚³‚¢: ");
+			System.out.print("æ•°å€¤ã¯1~100ã¾ã§ã®æ•´æ•°ã§ã™\nå€¤ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„: ");
 			InputStreamReader isr = new InputStreamReader(System.in);
 			BufferedReader br = new BufferedReader(isr);
 			try {
@@ -20,14 +20,14 @@ public class KisoKadai2 {
 				usans=0;
 			}
 			if (usans==0||usans>100){
-			System.out.println("1`100‚Ì®”‚Å‚·‚æ");
+			System.out.println("1~100ã®æ•´æ•°ã§ã™");
 			}else if (ans==usans){
 			System.out.println("Congratulations!");
 			flag = false;
 		}else if(ans < usans){
-			System.out.println("‘å‚«‚·‚¬‚Ü‚·");
+			System.out.println("å¤§ãã™ãã¾ã™");
 		}else if(ans > usans){
-			System.out.println("¬‚³‚·‚¬‚Ü‚·");
+			System.out.println("å°ã•ã™ãã¾ã™");
 		}
 		}
 	}

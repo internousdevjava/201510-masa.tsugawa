@@ -14,38 +14,41 @@ public class KisoKadai3 {
 		int slcm = 0;
 		while(true){
 		try {
-			System.out.println("ƒtƒ@ƒCƒ‹‚Ì“Ç‚İæ‚èA‘‚«‚İ‚ğs‚¢‚Ü‚·\n‘¶İ‚µ‚È‚¢ê‡‚ÍV‹Kì¬‚µ‚Ü‚·");
-			System.out.println("‰º‹L‚Ì—á‚É]‚Á‚Äƒtƒ@ƒCƒ‹–¼‚ğ“ü‚ê‚Ä‰º‚³‚¢");
-			System.out.println("—ájC:\\test\\test2\\testtext.txt");
-			System.out.print("ƒtƒ@ƒCƒ‹–¼:");
+			System.out.println("ãƒ•ã‚¡ã‚¤ãƒ«ã®ç·¨é›†ã‚’ã—ã¾ã™\nãƒ•ã‚¡ã‚¤ãƒ«ã¾ãŸã¯ãƒ•ã‚©ãƒ«ãƒ€ãŒãªã„å ´åˆã¯æ–°è¦ä½œæˆã—ã¾ã™");
+			System.out.println("ä¸‹è¨˜ã®ä¾‹ã«ã—ãŸãŒã£ã¦ãƒ•ã‚¡ã‚¤ãƒ«åã‚’è¨˜å…¥ã—ã¦ãã ã•ã„");
+			System.out.println("C:\\test\\test2\\text.txt");
+			System.out.print("ãƒ•ã‚¡ã‚¤ãƒ«å:ã€€");
 			str = br.readLine();
 		
 		File file = new File(str);
 		File dir = new File(file.getParent());
 		if (!dir.exists()) {
-			System.out.println("ƒtƒHƒ‹ƒ_‚ğì¬‚µ‚Ü‚·");
+			System.out.println("ãƒ•ã‚©ãƒ«ãƒ€ã‚’ä½œæˆã—ã¾ã™");
 			dir.mkdirs();
+			System.out.println("ä½œæˆå®Œäº†");
 		}
 		if (!file.exists()) {
-			System.out.println("ƒtƒ@ƒCƒ‹‚ğì¬‚µ‚Ü‚·");
-
+			System.out.println("ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œæˆã—ã¾ã™");
 			try {
 				file.createNewFile();
 			} catch (IOException e) {
+				System.out.println("ä½œæˆã‚¨ãƒ©ãƒ¼");
 				e.printStackTrace();
 			}
+			System.out.println("ä½œæˆå®Œäº†");
 		}
 		
 		
 		
 		boolean flag = true;
 		while (flag) {
-			System.out.println("ƒtƒ@ƒCƒ‹‚Ìì‹Æ‚ğ‘I‘ğ‚µ‚Ä‚­‚¾‚³‚¢");
-			System.out.println("1:“Ç‚İæ‚è@2F‘‚«æ‚è@3Fƒtƒ@ƒCƒ‹‚ÌÄw’è@4FI—¹");
+			System.out.println("ãƒ•ã‚¡ã‚¤ãƒ«ã®ç·¨é›†æ–¹æ³•ã‚’é¸æŠã—ã¦ãã ã•ã„");
+			System.out.println("1:èª­ã¿è¾¼ã¿ã€€2:æ›¸ãè¾¼ã¿ã€€3:ãƒ•ã‚¡ã‚¤ãƒ«ã®å†æŒ‡å®šã€€4:çµ‚äº†");
 
 			try {
 				slcm = Integer.parseInt(br.readLine());
 			} catch (IOException e) {
+				System.out.println("å…¥åŠ›ãƒŸã‚¹");
 				e.printStackTrace();
 			}
 
@@ -65,10 +68,10 @@ public class KisoKadai3 {
 				break;
 			case 2:
 				int slcw = 0;
-				System.out.println("‘‚«‚İ•û–@‚ğ‘I‘ğ‚µ‚Ä‚­‚¾‚³‚¢\n1:’Ç‹L@2:ã‘‚«");
+				System.out.println("æ›¸ãè¾¼ã¿æ–¹æ³•ã‚’é¸æŠã—ã¦ãã ã•ã„\n1:è¿½è¨˜ã€€2:ä¸Šæ›¸ã");
 				try {
 					slcw = Integer.parseInt((br.readLine()));
-					System.out.print("‹L“ü: ");
+					System.out.print("ï¿½Lï¿½ï¿½: ");
 					if (slcw == 1) {
 						FileWriter fwt = new FileWriter(file, true);
 						String strfwt = "";
@@ -90,16 +93,16 @@ public class KisoKadai3 {
 			case 3:flag=false;
 				continue;
 			case 4:
-				System.out.println("‚¨”æ‚ê—l‚Å‚µ‚½");
+				System.out.println("ãŠç–²ã‚Œæ§˜ã§ã—ãŸ");
 				flag = false;
 				break;
 			default:
-				System.out.println("1~3‚Å‹L“ü‚µ‚Ä‚­‚¾‚³‚¢");
+				System.out.println("1~4ã§å…¥åŠ›ã—ã¦ãã ã•ã„");
 				break;
 			}
 		}
 		} catch (Exception e1) {
-			System.out.println("“ü—Íƒ~ƒX");
+			System.out.println("å…¥åŠ›ãƒŸã‚¹");
 		}
 	}
 }}
